@@ -40,45 +40,31 @@ public class App
                 //Calculation
                 taxAmount = amount * (wisconsinTax + 0.005);
                 total = amount + taxAmount;
-
-                //Output
-                System.out.format("The tax is $%.2f", taxAmount);
-                System.out.format("The total is $%.2f", total);
             }
             else if (county.equals("Dunn"))
             {
                 //Calculation
                 taxAmount = amount * (wisconsinTax + 0.004);
                 total = amount + taxAmount;
-
-                //Output
-                System.out.format("The tax is $%.2f\n", taxAmount);
-                System.out.format("The total is $%.2f", total);
             }
             else
             {
                 //Calculation
                 taxAmount = amount * wisconsinTax;
                 total = amount + taxAmount;
-
-                //Output
-                System.out.format("The tax is $%.2f\n", taxAmount);
-                System.out.format("The total is $%.2f", total);
             }
         }
-        else if (state.equals("Illinois"))
-        {
+        else if (state.equals("Illinois")) {
             //Calculation
             taxAmount = amount * illinoisTax;
             total = amount + taxAmount;
-
-            //Output
-            System.out.format("The tax is $%.2f\n", taxAmount);
-            System.out.format("The total is $%.2f", total);
         }
         else
         {
-            System.out.format("The total is $%.2f",amount);
+            taxAmount = 0;
+            total = amount;
         }
+        System.out.format("The tax is $%.2f\n", taxAmount);
+        System.out.format("The total is $%.2f", total);
     }
 }
